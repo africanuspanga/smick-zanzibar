@@ -48,14 +48,14 @@ export default function HomePage() {
       <section className="px-3 pt-3 sm:px-5">
         <div className="relative isolate flex min-h-[640px] flex-col overflow-hidden rounded-[2rem] bg-navy-deep sm:min-h-[760px] sm:rounded-[2.75rem] lg:h-[92svh] lg:max-h-[900px]">
           <Image
-            src="/img/hero/zanzibar-aerial.webp"
-            alt="Aerial view of Zanzibar's turquoise lagoon and white beach"
+            src="/img/hero/zanzibar-dhows.webp"
+            alt="Traditional dhows anchored in turquoise water off a white Zanzibar beach"
             fill
             priority
             sizes="100vw"
-            className="-z-10 object-cover"
+            className="-z-10 object-cover object-[50%_35%]"
           />
-          <div aria-hidden className="absolute inset-0 -z-10 bg-gradient-to-b from-navy-deep/60 via-navy-deep/10 to-navy-deep/70" />
+          <div aria-hidden className="absolute inset-0 -z-10 bg-gradient-to-b from-navy-deep/60 via-navy-deep/15 to-navy-deep/45" />
 
           <div className="container-x flex flex-1 flex-col items-center justify-center pt-28 pb-36 text-center sm:pb-44">
             <p className="text-sm font-semibold tracking-[0.25em] text-white/90 uppercase sm:text-base">
@@ -64,7 +64,7 @@ export default function HomePage() {
             <h1 className="mt-3 font-display text-[clamp(4.2rem,17vw,12.5rem)] leading-[0.85] font-extrabold tracking-[-0.045em] text-white drop-shadow-[0_8px_30px_rgba(6,26,53,0.35)]">
               Zanzibar
             </h1>
-            <p className="mt-4 font-script text-2xl text-sun sm:text-3xl">{site.tagline}</p>
+            <p className="mt-4 font-script text-2xl text-sun drop-shadow-[0_2px_8px_rgba(6,26,53,0.7)] sm:text-3xl">{site.tagline}</p>
 
             <div className="mt-8 flex flex-col items-center gap-6 sm:flex-row sm:gap-10">
               <Link href="/zanzibar-tours" className="btn-sun group !py-2 !pr-2 !pl-7 text-base">
@@ -73,7 +73,7 @@ export default function HomePage() {
                   <ArrowUpRight className="size-5" aria-hidden />
                 </span>
               </Link>
-              <p className="max-w-sm text-left text-[15px] leading-relaxed text-white/90 max-sm:text-center">
+              <p className="max-w-sm text-left text-[15px] leading-relaxed text-white drop-shadow-[0_1px_6px_rgba(6,26,53,0.8)] max-sm:text-center">
                 Sandbanks, spice farms, dolphins and the Serengeti next door — planned by a local team in Stone Town.
               </p>
             </div>

@@ -1,13 +1,21 @@
 import Image from "next/image"
 import { cn } from "@/lib/utils"
 
-/** Logo emblem in a white badge (the artwork has dark lettering) plus the wordmark. */
+/**
+ * The scene from the SMICK logo (sunset savannah + ocean) cropped into a pill, plus the wordmark.
+ * The full logo's lettering is unreadable at nav size, so the wordmark is set in type instead.
+ */
 export function BrandMark({ light = false, className }: { light?: boolean; className?: string }) {
   return (
     <span className={cn("flex items-center gap-2.5", className)}>
-      <span className="grid size-12 shrink-0 place-items-center overflow-hidden rounded-full bg-white shadow-md ring-1 ring-black/5 sm:size-13">
-        <Image src="/img/brand/smick-logo-128.webp" alt="" width={128} height={128} loading="eager" className="aspect-square size-[108%] max-w-none object-contain" />
-      </span>
+      <Image
+        src="/img/brand/smick-scene-192.webp"
+        alt=""
+        width={409}
+        height={192}
+        loading="eager"
+        className="h-11 w-auto shrink-0 rounded-full shadow-[0_6px_18px_-6px_rgba(6,26,53,0.55)] ring-2 ring-white sm:h-12"
+      />
       <span className="leading-none">
         <span className={cn("block font-display text-xl font-extrabold tracking-tight", light ? "text-white" : "text-navy")}>
           SMICK
