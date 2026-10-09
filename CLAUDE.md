@@ -21,7 +21,7 @@ Website for **SMICK Tours & Safaris**, a tour agency in Stone Town, Zanzibar, Ta
 ## Contact (single source: `lib/site.ts`)
 - Phone / WhatsApp: +255 673 494 502 — `wa.me/255673494502` (public short link `wa.me/smickwaves`)
 - Email: Iconibreezy@icloud.com
-- Location: Stone Town, Zanzibar · Domain: https://smickzanzibar.com
+- Location: Stone Town, Zanzibar · Domain: https://www.smickzanzibar.com (apex 308-redirects to www)
 
 ## Structure
 ```

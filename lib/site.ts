@@ -4,7 +4,7 @@ export const site = {
   tagline: "Explore • Discover • Experience",
   description:
     "Stone Town tour agency for Zanzibar excursions, airport & hotel pickups, holiday packages and Tanzania safaris to Serengeti, Ngorongoro and Mikumi.",
-  url: "https://smickzanzibar.com",
+  url: "https://www.smickzanzibar.com",
   phone: "+255 673 494 502",
   phoneHref: "tel:+255673494502",
   whatsapp: "255673494502",
