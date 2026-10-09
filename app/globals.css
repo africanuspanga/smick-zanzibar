@@ -1,0 +1,203 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+/*
+ * SMICK Tours & Safaris — brand tokens.
+ * Navy, sunset amber and ocean blue are sampled from the SMICK logo.
+ */
+:root {
+  --navy: #0b2a52;
+  --navy-deep: #061a35;
+  --sun: #f7a21b;
+  --sun-deep: #e8870a;
+  --sun-soft: #fff3dd;
+  --ocean: #1a9ad6;
+  --ocean-soft: #e6f5fc;
+  --ocean-ink: #0b6fa4; /* ocean for text: 5.5:1 on white */
+  --sun-ink: #a35300; /* amber for text: 5.5:1 on white */
+  --sand: #fbf7f0;
+  --ink: #0e1b2e;
+  --muted-ink: #5a6a80;
+  --line: #e6ebf2;
+
+  /* shadcn/ui primitives mapped onto the brand */
+  --background: #ffffff;
+  --foreground: var(--ink);
+  --card: #ffffff;
+  --card-foreground: var(--ink);
+  --popover: #ffffff;
+  --popover-foreground: var(--ink);
+  --primary: var(--navy);
+  --primary-foreground: #ffffff;
+  --secondary: var(--sand);
+  --secondary-foreground: var(--navy);
+  --muted: #f3f6fa;
+  --muted-foreground: var(--muted-ink);
+  --accent: var(--sun-soft);
+  --accent-foreground: var(--navy);
+  --destructive: #d93b3b;
+  --destructive-foreground: #ffffff;
+  --border: var(--line);
+  --input: #dfe5ee;
+  --ring: var(--ocean);
+  --radius: 1rem;
+}
+
+@theme inline {
+  --color-navy: var(--navy);
+  --color-navy-deep: var(--navy-deep);
+  --color-sun: var(--sun);
+  --color-sun-deep: var(--sun-deep);
+  --color-sun-soft: var(--sun-soft);
+  --color-ocean: var(--ocean);
+  --color-ocean-soft: var(--ocean-soft);
+  --color-ocean-ink: var(--ocean-ink);
+  --color-sun-ink: var(--sun-ink);
+  --color-sand: var(--sand);
+  --color-ink: var(--ink);
+  --color-muted-ink: var(--muted-ink);
+  --color-line: var(--line);
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  --radius-sm: calc(var(--radius) - 8px);
+  --radius-md: calc(var(--radius) - 4px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+
+  --font-sans: var(--font-body);
+  --font-display: var(--font-heading);
+  --font-script: var(--font-accent);
+
+  --breakpoint-xs: 30rem;
+
+  --animate-float: float 6s ease-in-out infinite;
+  --animate-marquee: marquee 40s linear infinite;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes marquee {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  html {
+    scroll-behavior: smooth;
+    -webkit-tap-highlight-color: transparent;
+  }
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    overflow-x: clip;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-display text-navy;
+    letter-spacing: -0.02em;
+    text-wrap: balance;
+  }
+  p {
+    text-wrap: pretty;
+  }
+  ::selection {
+    background: var(--sun);
+    color: var(--navy-deep);
+  }
+}
+
+@utility container-x {
+  @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8;
+}
+
+@utility eyebrow {
+  @apply inline-flex items-center gap-2 text-sm font-semibold tracking-wide text-ocean-ink;
+}
+
+@utility btn {
+  @apply inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-[15px] font-semibold whitespace-nowrap transition-all duration-200 focus-visible:ring-4 focus-visible:ring-ocean/30 focus-visible:outline-none disabled:pointer-events-none disabled:opacity-60;
+}
+
+@utility btn-sun {
+  @apply btn bg-sun text-navy-deep shadow-[0_10px_30px_-10px_rgba(247,162,27,0.8)] hover:-translate-y-0.5 hover:bg-sun-deep;
+}
+
+@utility btn-navy {
+  @apply btn bg-navy text-white hover:-translate-y-0.5 hover:bg-navy-deep;
+}
+
+@utility btn-ghost-light {
+  @apply btn border border-white/40 bg-white/10 text-white backdrop-blur-md hover:bg-white/20;
+}
+
+@utility btn-outline {
+  @apply btn border border-navy/15 bg-white text-navy hover:border-navy/40;
+}
+
+@utility chip {
+  @apply inline-flex items-center gap-1.5 rounded-full bg-white/90 px-3 py-1 text-xs font-semibold text-navy shadow-sm backdrop-blur;
+}
+
+@utility card-lift {
+  @apply transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_24px_50px_-20px_rgba(11,42,82,0.35)];
+}
+
+@utility no-scrollbar {
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/* Pages with a sticky mobile booking bar: keep the WhatsApp button and footer clear of it. */
+@media (width < 64rem) {
+  body:has([data-sticky-cta]) {
+    padding-bottom: 4.75rem;
+  }
+  body:has([data-sticky-cta]) .wa-float {
+    bottom: 5.75rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
