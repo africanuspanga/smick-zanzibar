@@ -329,7 +329,7 @@ export default function HomePage() {
               {[
                 { to: "Airport → Stone Town", p: "$15" },
                 { to: "Airport → Paje / Jambiani", p: "$40" },
-                { to: "Airport → Nungwi / Kendwa", p: "$80" },
+                { to: "Airport → Nungwi / Kendwa", p: "$50" },
               ].map((r) => (
                 <li key={r.to} className="flex items-center justify-between py-3.5">
                   <span className="font-medium text-navy">{r.to}</span>

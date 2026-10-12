@@ -9,7 +9,7 @@ import { fleet, transferGroups } from "@/lib/data/transfers"
 export const metadata: Metadata = {
   title: "Airport & Hotel Transfers in Zanzibar",
   description:
-    "Fixed-price Zanzibar airport, ferry and hotel transfers: Stone Town $15, Paje & Jambiani $40, Nungwi & Kendwa $80. Private vehicles with professional drivers.",
+    "Fixed-price Zanzibar airport, ferry and hotel transfers: Stone Town $15, Paje & Jambiani $40, Nungwi & Kendwa $50. Private vehicles with professional drivers.",
   alternates: { canonical: "/transfers" },
 }
 
