@@ -12,6 +12,9 @@ export const site = {
   email: "Iconibreezy@icloud.com",
   location: "Stone Town, Zanzibar, Tanzania",
   regions: "Tanzania | Zanzibar",
+  /** Google Business Profile: opens the "write a review" box / the public profile. */
+  googleReviewUrl: "https://search.google.com/local/writereview?placeid=ChIJmeeZMgMfQxgRTx5rld3wEQU",
+  googleProfileUrl: "https://www.google.com/maps/place/?q=place_id:ChIJmeeZMgMfQxgRTx5rld3wEQU",
 } as const
 
 /** Builds a wa.me link that opens a chat with a prefilled message. */

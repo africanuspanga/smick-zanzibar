@@ -4,6 +4,7 @@ import { ArrowRight, ArrowUpRight, BadgeCheck, Car, Clock, Compass, Headset, Map
 import { BestPicks } from "@/components/home/best-picks"
 import { BookRide, type TripOption } from "@/components/home/book-ride"
 import { ExtraServices } from "@/components/extra-services"
+import { GoogleReview } from "@/components/home/google-review"
 import { Faq } from "@/components/faq"
 import { FlightPath } from "@/components/icons"
 import { SectionHeading } from "@/components/section-heading"
@@ -344,6 +345,8 @@ export default function HomePage() {
           ))}
         </div>
       </section>
+
+      <GoogleReview className="mt-24 lg:mt-32" />
 
       <ExtraServices className="mt-28 lg:mt-36" />
 
