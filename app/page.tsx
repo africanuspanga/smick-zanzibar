@@ -42,7 +42,7 @@ const moments = [
 ]
 
 const heroStats = [
-  { icon: Compass, value: "15+", label: "Excursions" },
+  { icon: Compass, value: "25+", label: "Excursions" },
   { icon: Star, value: "5-star", label: "Service" },
   { icon: Headset, value: "24/7", label: "Support" },
   { icon: BadgeCheck, value: "Zanzibar", label: "Experts" },

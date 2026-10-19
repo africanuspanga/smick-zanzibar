@@ -853,7 +853,6 @@ export const tours: Experience[] = [
     duration: "Full day",
     groupSize: "Private, 1–15 people",
     location: "Kizimbani, Stone Town & Changuu",
-    priceFrom: 150,
     overview: [
       "Part of our six-day Zanzibar series: each day is a full, private tour that covers a different corner of the island. Book one day, a few, or all six back to back — your driver picks you up from your hotel each morning.",
     ],
@@ -876,18 +875,9 @@ export const tours: Experience[] = [
         text: "A short boat ride to Changuu Island to meet the giant Aldabra tortoises, see the old quarantine buildings and swim or snorkel off the beach.",
       },
     ],
-    pricing: [
-      {
-        rows: [
-          { label: "Per person (private tour)", price: "$150" },
-          { label: "Groups of 4 or more", price: "20% off" },
-          { label: "Add: spice lunch & fresh juice", price: "+$15" },
-          { label: "Add: Freddie Mercury House entry", price: "+$10" },
-        ],
-      },
-    ],
+    pricing: [{ rows: [{ label: "Per person (private tour)", price: "On request" }] }],
     included: ["Hotel pickup & drop-off", "Entrance fees", "Boat to Prison Island", "Professional guide", "Drinking water"],
-    notes: ["Prices are per person for a private tour. Book two or more days of the series and we'll plan them as one trip."],
+    notes: ["Price on request — tell us your group size and dates. Book two or more days of the series and we'll plan them as one trip."],
   },
   {
     slug: "day-2-nakupenda-prison-island-stone-town",
@@ -901,7 +891,6 @@ export const tours: Experience[] = [
     duration: "Full day",
     groupSize: "Private, 1–15 people",
     location: "Nakupenda, Changuu & Stone Town",
-    priceFrom: 150,
     overview: [
       "Part of our six-day Zanzibar series: each day is a full, private tour that covers a different corner of the island. Book one day, a few, or all six back to back — your driver picks you up from your hotel each morning.",
     ],
@@ -924,17 +913,9 @@ export const tours: Experience[] = [
         text: "Back on land, wander the narrow streets, markets and landmarks of the old town with your guide.",
       },
     ],
-    pricing: [
-      {
-        rows: [
-          { label: "Per person (private tour)", price: "$150" },
-          { label: "Groups of 4 or more", price: "20% off" },
-          { label: "Add: Freddie Mercury Museum entry", price: "+$10" },
-        ],
-      },
-    ],
+    pricing: [{ rows: [{ label: "Per person (private tour)", price: "On request" }] }],
     included: ["Hotel pickup & drop-off", "Boat trips", "Seafood or chicken BBQ lunch", "Activity fees", "Professional guide", "Fruits & soft drinks"],
-    notes: ["Prices are per person for a private tour. Book two or more days of the series and we'll plan them as one trip."],
+    notes: ["Price on request — tell us your group size and dates. Book two or more days of the series and we'll plan them as one trip."],
   },
   {
     slug: "day-3-jozani-mtende-salaam-cave",
@@ -948,7 +929,6 @@ export const tours: Experience[] = [
     duration: "Full day",
     groupSize: "Private, 1–15 people",
     location: "Jozani, Kizimkazi & Mtende",
-    priceFrom: 150,
     overview: [
       "Part of our six-day Zanzibar series: each day is a full, private tour that covers a different corner of the island. Book one day, a few, or all six back to back — your driver picks you up from your hotel each morning.",
     ],
@@ -971,16 +951,9 @@ export const tours: Experience[] = [
         text: "Finish at a secluded cove with coral cliffs, white sand and clear turquoise water.",
       },
     ],
-    pricing: [
-      {
-        rows: [
-          { label: "Per person (private tour)", price: "$150" },
-          { label: "Groups of 4 or more", price: "20% off" },
-        ],
-      },
-    ],
+    pricing: [{ rows: [{ label: "Per person (private tour)", price: "On request" }] }],
     included: ["Hotel pickup & drop-off", "Entrance fees", "Professional guide", "Drinking water"],
-    notes: ["Prices are per person for a private tour. Book two or more days of the series and we'll plan them as one trip."],
+    notes: ["Price on request — tell us your group size and dates. Book two or more days of the series and we'll plan them as one trip."],
   },
   {
     slug: "day-4-mnemba-kendwa-aquarium",
@@ -994,7 +967,6 @@ export const tours: Experience[] = [
     duration: "Full day",
     groupSize: "Private, 1–15 people",
     location: "Mnemba, Nungwi & Kendwa",
-    priceFrom: 150,
     overview: [
       "Part of our six-day Zanzibar series: each day is a full, private tour that covers a different corner of the island. Book one day, a few, or all six back to back — your driver picks you up from your hotel each morning.",
     ],
@@ -1017,17 +989,9 @@ export const tours: Experience[] = [
         text: "Relax on the soft sand of Kendwa and watch one of the island's best sunsets.",
       },
     ],
-    pricing: [
-      {
-        rows: [
-          { label: "Per person (private tour)", price: "$150" },
-          { label: "Groups of 4 or more", price: "20% off" },
-          { label: "Add: seafood lunch", price: "+$15" },
-        ],
-      },
-    ],
+    pricing: [{ rows: [{ label: "Per person (private tour)", price: "On request" }] }],
     included: ["Hotel pickup & drop-off", "Entrance fees", "Boat", "Professional guide", "Snorkelling gear", "Water & fresh fruits"],
-    notes: ["Prices are per person for a private tour. Book two or more days of the series and we'll plan them as one trip."],
+    notes: ["Price on request — tell us your group size and dates. Book two or more days of the series and we'll plan them as one trip."],
   },
   {
     slug: "day-5-jozani-kuza-cave-the-rock",
@@ -1041,7 +1005,6 @@ export const tours: Experience[] = [
     duration: "Full day",
     groupSize: "Private, 1–15 people",
     location: "Jozani, Jambiani & Michamvi",
-    priceFrom: 150,
     overview: [
       "Part of our six-day Zanzibar series: each day is a full, private tour that covers a different corner of the island. Book one day, a few, or all six back to back — your driver picks you up from your hotel each morning.",
     ],
@@ -1069,17 +1032,9 @@ export const tours: Experience[] = [
         text: "End the day with a drink and the sunset on the Michamvi peninsula.",
       },
     ],
-    pricing: [
-      {
-        rows: [
-          { label: "Per person (private tour)", price: "$150" },
-          { label: "Groups of 4 or more", price: "20% off" },
-          { label: "Lunch at The Rock", price: "Not included" },
-        ],
-      },
-    ],
+    pricing: [{ rows: [{ label: "Per person (private tour)", price: "On request" }] }],
     included: ["Hotel pickup & drop-off", "Entrance fees", "Professional guide", "Drinking water"],
-    notes: ["Prices are per person for a private tour. Book two or more days of the series and we'll plan them as one trip."],
+    notes: ["Price on request — tell us your group size and dates. Book two or more days of the series and we'll plan them as one trip."],
   },
   {
     slug: "day-6-safari-blue",
@@ -1093,7 +1048,6 @@ export const tours: Experience[] = [
     duration: "Full day",
     groupSize: "Private, 1–15 people",
     location: "Fumba & Menai Bay",
-    priceFrom: 135,
     overview: [
       "Part of our six-day Zanzibar series: each day is a full, private tour that covers a different corner of the island. Book one day, a few, or all six back to back — your driver picks you up from your hotel each morning.",
     ],
@@ -1116,15 +1070,9 @@ export const tours: Experience[] = [
         text: "Feast on a seafood BBQ with tropical fruits, visit the giant baobab tree and sail back at sunset.",
       },
     ],
-    pricing: [
-      {
-        rows: [
-          { label: "Per person (private tour)", price: "$135" },
-        ],
-      },
-    ],
+    pricing: [{ rows: [{ label: "Per person (private tour)", price: "On request" }] }],
     included: ["Entrance & conservation fees", "Professional guide", "Boat", "Seafood lunch", "Soft drinks", "Snorkelling gear"],
-    notes: ["Prices are per person for a private tour. Book two or more days of the series and we'll plan them as one trip."],
+    notes: ["Price on request — tell us your group size and dates. Book two or more days of the series and we'll plan them as one trip."],
   },
 ]
 
