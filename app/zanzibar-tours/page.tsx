@@ -1,6 +1,7 @@
 import type { Metadata } from "next"
 import Link from "next/link"
 import { Car } from "lucide-react"
+import { ExtraServices } from "@/components/extra-services"
 import { FilterableGrid } from "@/components/filterable-grid"
 import { PageHero } from "@/components/page-hero"
 import { tourCategories, tours } from "@/lib/data/tours"
@@ -8,7 +9,7 @@ import { tourCategories, tours } from "@/lib/data/tours"
 export const metadata: Metadata = {
   title: "Zanzibar Tours & Excursions",
   description:
-    "Stone Town, Prison Island, Nakupenda, Safari Blue, spice farm, Jozani, caves, dolphins, fishing, horse riding, sunset cruises, turtles and boat parties.",
+    "Stone Town, Prison Island, Nakupenda, Mnemba, Pungume, Blue Lagoon, Maalum Cave, quad bikes, Safari Blue, Jozani, dolphins, multi-day tours and more.",
   alternates: { canonical: "/zanzibar-tours" },
 }
 
@@ -45,6 +46,8 @@ export default function ZanzibarToursPage() {
           </Link>
         </div>
       </section>
+
+      <ExtraServices className="mt-24" />
     </>
   )
 }

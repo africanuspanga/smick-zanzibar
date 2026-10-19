@@ -9,6 +9,7 @@ import { site, whatsappUrl } from "@/lib/site"
 const company = [
   { href: "/packages", label: "Holiday packages" },
   { href: "/transfers", label: "Airport & hotel pickups" },
+  { href: "/car-rental", label: "Car rental" },
   { href: "/about", label: "About SMICK" },
   { href: "/contact", label: "Contact us" },
 ]

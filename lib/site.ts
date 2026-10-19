@@ -26,6 +26,7 @@ export const nav = [
   { href: "/safaris", label: "Safaris" },
   { href: "/packages", label: "Packages" },
   { href: "/transfers", label: "Transfers" },
+  { href: "/car-rental", label: "Car Rental" },
   { href: "/about", label: "About" },
   { href: "/contact", label: "Contact" },
 ] as const

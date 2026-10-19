@@ -1,11 +1,13 @@
 import Image from "next/image"
 import Link from "next/link"
-import { ArrowRight, ArrowUpRight, BadgeCheck, Car, Clock, Compass, MapPin, MessageCircle, Plane, ShieldCheck, Sparkles } from "lucide-react"
+import { ArrowRight, ArrowUpRight, BadgeCheck, Car, Clock, Compass, Headset, MapPin, MessageCircle, Plane, ShieldCheck, Sparkles, Star } from "lucide-react"
 import { BestPicks } from "@/components/home/best-picks"
-import { TripPlanner } from "@/components/home/trip-planner"
+import { BookRide, type TripOption } from "@/components/home/book-ride"
+import { ExtraServices } from "@/components/extra-services"
 import { Faq } from "@/components/faq"
 import { FlightPath } from "@/components/icons"
 import { SectionHeading } from "@/components/section-heading"
+import { formatPrice, hrefFor } from "@/lib/data"
 import { packages } from "@/lib/data/packages"
 import { safaris } from "@/lib/data/safaris"
 import { tours } from "@/lib/data/tours"
@@ -38,6 +40,19 @@ const moments = [
   { src: "/img/moments/boat-bow.webp", alt: "Sitting on the bow of a boat in turquoise water" },
   { src: "/img/moments/speedboat.webp", alt: "Speedboat on the Indian Ocean" },
 ]
+
+const heroStats = [
+  { icon: Compass, value: "15+", label: "Excursions" },
+  { icon: Star, value: "5-star", label: "Service" },
+  { icon: Headset, value: "24/7", label: "Support" },
+  { icon: BadgeCheck, value: "Zanzibar", label: "Experts" },
+]
+
+const tripOptions: TripOption[] = [
+  ...tours.map((t) => ({ t, group: "Zanzibar tours" })),
+  ...safaris.map((t) => ({ t, group: "Safaris" })),
+  ...packages.map((t) => ({ t, group: "Holiday packages" })),
+].map(({ t, group }) => ({ title: t.title, href: hrefFor(t), price: formatPrice(t), group }))
 
 const pick = <T extends { featured?: boolean }>(list: T[], n = 4) => list.filter((x) => x.featured).slice(0, n)
 
@@ -74,15 +89,29 @@ export default function HomePage() {
                 </span>
               </Link>
               <p className="max-w-sm text-left text-[15px] leading-relaxed text-white drop-shadow-[0_1px_6px_rgba(6,26,53,0.8)] max-sm:text-center">
-                Sandbanks, spice farms, dolphins and the Serengeti next door — planned by a local team in Stone Town.
+                Sandbanks, spice farms, dolphins and the Serengeti next door — planned by your local agent in Stone Town.
               </p>
             </div>
+
+            <ul className="mt-10 grid w-full max-w-3xl grid-cols-2 gap-px overflow-hidden rounded-3xl bg-white/20 ring-1 ring-white/25 backdrop-blur-md sm:grid-cols-4 sm:rounded-full">
+              {heroStats.map((s) => (
+                <li key={s.label} className="flex items-center justify-center gap-3 bg-navy-deep/35 px-4 py-3.5 text-left">
+                  <span className="grid size-9 shrink-0 place-items-center rounded-full bg-sun text-navy-deep">
+                    <s.icon className="size-4" aria-hidden />
+                  </span>
+                  <span className="leading-tight">
+                    <span className="block font-display text-lg font-bold text-white">{s.value}</span>
+                    <span className="text-xs font-medium tracking-wide text-white/80 uppercase">{s.label}</span>
+                  </span>
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
 
         <div className="container-x relative z-10 -mt-24 sm:-mt-20">
-          <div className="mx-auto max-w-5xl">
-            <TripPlanner />
+          <div className="mx-auto max-w-6xl">
+            <BookRide trips={tripOptions} />
           </div>
         </div>
       </section>
@@ -90,17 +119,17 @@ export default function HomePage() {
       {/* ── Intro ────────────────────────────────────────────── */}
       <section className="container-x mt-24 grid items-center gap-14 lg:mt-32 lg:grid-cols-2">
         <div className="relative">
-          <p className="font-script text-2xl text-sun-ink">We are SMICK!</p>
+          <p className="font-script text-2xl text-sun-ink">I am SMICK!</p>
           <h2 className="mt-2 text-4xl leading-[1.02] font-extrabold sm:text-6xl">
             Your local
             <br />
-            travel agency
+            travel agent
           </h2>
           <FlightPath className="pointer-events-none absolute top-6 right-0 hidden w-56 text-ocean-ink/70 xl:block" />
           <p className="mt-6 max-w-lg text-lg leading-relaxed text-muted-ink">
-            SMICK Tours &amp; Safaris is based in Stone Town. We pick you up from your hotel, take you to the island&apos;s
-            best spots with guides who grew up here, and plan safaris to Serengeti, Ngorongoro and Mikumi — all arranged
-            in one WhatsApp chat.
+            I&apos;m based in Stone Town and I run SMICK Tours &amp; Safaris. I pick you up from your hotel, take you to the
+            island&apos;s best spots with guides who grew up here, and plan safaris to Serengeti, Ngorongoro and Mikumi —
+            all arranged with me in one WhatsApp chat.
           </p>
           <dl className="mt-8 grid max-w-md grid-cols-3 gap-4">
             {[
@@ -119,7 +148,7 @@ export default function HomePage() {
             ))}
           </dl>
           <Link href="/about" className="mt-8 inline-flex items-center gap-2 font-semibold text-ocean-ink underline-offset-4 hover:underline">
-            Learn more about us <ArrowRight className="size-4" aria-hidden />
+            Learn more about SMICK <ArrowRight className="size-4" aria-hidden />
           </Link>
         </div>
 
@@ -315,6 +344,8 @@ export default function HomePage() {
           ))}
         </div>
       </section>
+
+      <ExtraServices className="mt-28 lg:mt-36" />
 
       <Faq className="mt-28 lg:mt-36" />
 

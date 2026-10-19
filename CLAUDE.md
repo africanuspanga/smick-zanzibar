@@ -26,20 +26,24 @@ Website for **SMICK Tours & Safaris**, a tour agency in Stone Town, Zanzibar, Ta
 ## Structure
 ```
 app/page.tsx                      Home
-app/zanzibar-tours/[slug]         15 excursions   (data: lib/data/tours.ts)
+app/zanzibar-tours/[slug]         28 excursions incl. 6-day "Multi-day" series (data: lib/data/tours.ts)
 app/safaris/[slug]                10 safaris      (data: lib/data/safaris.ts)
 app/packages/[slug]               8 packages      (data: lib/data/packages.ts)
-app/transfers, about, contact     static pages    (transfer prices: lib/data/transfers.ts)
+app/transfers, about, contact     static pages    (transfer prices + price lookup: lib/data/transfers.ts)
+app/car-rental                    rental fleet + quote form (data: lib/data/rental.ts)
+lib/data/extras.ts                extra services (on request), shown on home + tours page
+components/home/book-ride.tsx     home "Book your ride" card (transfer/tour → WhatsApp)
 app/sitemap.ts, robots.ts         generated from the data files
 components/experience-detail.tsx  shared detail template for every tour/safari/package
 components/booking-dialog.tsx     booking form → opens WhatsApp with a prefilled message
-public/img/                       optimised WebP images (hero/, tours/, safari/, moments/, vehicles/, brand/)
+public/img/                       optimised WebP images (hero/, tours/, safari/, moments/, vehicles/, rental/, services/, brand/)
 assets/source/                    original logo + client WhatsApp photos (not deployed)
 ```
 
 ## Conventions
 - Content changes go in `lib/data/*` — pages are generated from them. Omit `priceFrom` for "On request".
 - Detail routes use `generateStaticParams` + `dynamicParams = false` (required for static export).
+- Copy is first-person singular: SMICK is one travel agent ("I am SMICK"), not an agency team.
 - Bookings never collect payment; every form hands off to WhatsApp (or mailto).
 - `public/img/moments/*` are the client's real photos — use them for authenticity; don't invent reviews, ratings or awards.
 - New images: convert to WebP (≤1200px cards, ≤2400px heroes) before adding to `public/img/`.
